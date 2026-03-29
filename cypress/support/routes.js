@@ -1,6 +1,7 @@
 export const routes = {
   usuarios: {
     cadastro: '/usuarios/cadastro',
-    login: '/login'
+    login: '/login',
+    usuarioClube:'/usuarios/clube'
   }
 }

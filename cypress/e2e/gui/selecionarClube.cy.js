@@ -3,7 +3,7 @@ import { routes } from '../../support/routes'
 
 describe('Cadastro via API + Login via GUI', () => {
 
-  it('deve cadastrar usuario via API e logar pela interface com sucesso', () => {
+  it('deve selecionar clube com sucesso', () => {
 
     const usuario = {
       nome: faker.person.fullName(),
