@@ -49,7 +49,7 @@ describe('Cadastro via API + Login via GUI', () => {
 
       cy.request({
         method: 'POST',
-        url: '/login',
+        url: routes.usuarios.login,
         body: {
           email: usuario.email,
           senha: usuario.senha
