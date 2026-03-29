@@ -28,5 +28,8 @@ describe('Cadastro via API + Login via GUI', () => {
       })
       cy.contains('Bem-vindo!').should('be.visible')
     })
+   cy.get('#card-cruzeiro').click()
+   cy.contains('Clube definido com sucesso!').should('be.visible')
+   cy.contains('Seu time é o Cruzeiro').should('be.visible')
   })
 })
