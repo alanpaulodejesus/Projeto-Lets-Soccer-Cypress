@@ -3,7 +3,7 @@ import { routes } from '../../support/routes'
 
 describe('Selecionar escalação', () => {
 
-  it('deve selecionar escalação de time com sucesso', () => {
+  it('deve validar confirmar escalacao sem selecionar jogadores', () => {
 
     const usuario = {
       nome: faker.person.fullName(),
@@ -39,6 +39,7 @@ describe('Selecionar escalação', () => {
     cy.get('#campoFutebol .posicao')
       .should('have.length', 11)
     cy.get('#modalJogadores > .modal-footer > .green').click()  
+    cy.get('#mensagemJogadores').contains('Selecione exatamente 11 jogadores!').should('be.visible')
 
   })
 })
