@@ -1,9 +1,9 @@
 import { faker } from '@faker-js/faker'
 import { routes } from '../../support/routes'
 
-describe('Selecionar clube', () => {
+describe('Selecionar escalação', () => {
 
-  it('deve selecionar clube com sucesso', () => {
+  it('deve selecionar escalação de time com sucesso', () => {
 
     const usuario = {
       nome: faker.person.fullName(),
@@ -28,8 +28,17 @@ describe('Selecionar clube', () => {
       })
       cy.contains('Bem-vindo!').should('be.visible')
     })
-   cy.get('#card-cruzeiro').click()
-   cy.contains('Clube definido com sucesso!').should('be.visible')
-   cy.contains('Seu time é o Cruzeiro').should('be.visible')
+    cy.get('#card-cruzeiro').click()
+    cy.contains('Clube definido com sucesso!').should('be.visible')
+    cy.contains('Seu time é o Cruzeiro').should('be.visible')
+
+    cy.get('#btnEsquema').click()
+    cy.contains('#modalEsquema label', '4-4-2').click()
+    cy.contains('#modalEsquema a', 'Confirmar').click()
+    cy.get('#campoFutebol').should('be.visible')
+    cy.get('#campoFutebol .posicao')
+      .should('have.length', 11)
+    cy.get('#modalJogadores > .modal-footer > .green').click()  
+
   })
 })
