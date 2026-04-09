@@ -38,7 +38,7 @@ describe('Selecionar escalação', () => {
     cy.get('#campoFutebol').should('be.visible')
     cy.get('#campoFutebol .posicao')
       .should('have.length', 11)
-    cy.get('#modalJogadores > .modal-footer > .green').click()  
+    cy.get('#confirmar-selecao').scrollIntoView().should('be.visible').click();
     cy.get('#mensagemJogadores').contains('Selecione exatamente 11 jogadores!').should('be.visible')
 
   })
