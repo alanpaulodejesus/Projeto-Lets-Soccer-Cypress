@@ -30,6 +30,6 @@ describe('Selecionar clube', () => {
     })
    cy.get('#card-cruzeiro').click()
    cy.contains('Clube definido com sucesso!').should('be.visible')
-   cy.contains('Seu time é o Cruzeiro').should('be.visible')
+   cy.contains('Seu time: Cruzeiro').should('be.visible')
   })
 })

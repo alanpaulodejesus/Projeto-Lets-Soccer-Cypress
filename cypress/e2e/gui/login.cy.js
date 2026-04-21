@@ -78,7 +78,7 @@ describe('Cadastro via API + Login via GUI', () => {
             email: usuario.email,
             senha: usuario.senha
           })
-          cy.contains('Seu time é o Cruzeiro').should('be.visible')
+          cy.contains('Seu time: Cruzeiro').should('be.visible')
         })
       })
     })

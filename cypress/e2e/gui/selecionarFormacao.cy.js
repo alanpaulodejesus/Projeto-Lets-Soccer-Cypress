@@ -30,7 +30,7 @@ describe('Selecionar escalação', () => {
     })
     cy.get('#card-cruzeiro').click()
     cy.contains('Clube definido com sucesso!').should('be.visible')
-    cy.contains('Seu time é o Cruzeiro').should('be.visible')
+    cy.contains('Seu time: Cruzeiro').should('be.visible')
 
     cy.get('#btnEsquema').click()
     cy.contains('#modalEsquema label', '4-4-2').click()
