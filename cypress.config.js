@@ -4,7 +4,7 @@ module.exports = defineConfig({
   allowCypressEnv: false ,
   e2e: {
     baseUrl: "http://localhost:8080",
-    testIsolation: true, // Obrigatório conforme as dicas do Gist
+    testIsolation: true,
     viewportWidth: 1280,
     viewportHeight: 720,
     setupNodeEvents(on, config) {
